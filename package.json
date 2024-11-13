@@ -1,0 +1,51 @@
+{
+  "name": "socket-server",
+  "version": "1.0.0",
+  "description": "\"# photo-finder-server\" \r \"# photo-finder-server\"",
+  "main": "index.js",
+  "scripts": {
+    "build": " tsc",
+    "dev": "concurrently  \"npx tsc -w\" \"nodemon --env-file .env build/index.js \" ",
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 node --env-file .env build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node --env-file .env build/index.js",
+    "start_worker": "node --env-file .env build/worker/TrainImages.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-rekognition": "^3.670.0",
+    "@aws-sdk/client-s3": "^3.668.0",
+    "@types/form-data": "^2.2.1",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/multer": "^1.4.12",
+    "axios": "^1.7.7",
+    "canvas": "^2.11.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-validator": "^7.2.0",
+    "form-data": "^4.0.1",
+    "imap": "^0.8.19",
+    "imapflow": "^1.0.164",
+    "jsonwebtoken": "^9.0.2",
+    "mailparser": "^3.7.1",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.15",
+    "nodemon": "^3.1.7",
+    "razorpay": "^2.9.4",
+    "sharp": "^0.33.5",
+    "winston": "^3.14.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "concurrently": "^9.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2"
+  }
+}
